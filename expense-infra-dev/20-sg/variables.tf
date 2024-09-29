@@ -15,9 +15,33 @@ variable "common_tags" {
      }
 }
 
-variable "sg_tags" {
+variable "sql_sg_tags" {
     default = {
         Component = "mysql"
+    }
+
+}
+variable "backend_sg_tags" {
+    default = {
+        Component = "backend"
+    }
+
+}
+variable "fronted_sg_tags" {
+    default = {
+        Component = "frontend"
+    }
+
+}
+variable "bastion_sg_tags" {
+    default = {
+        Component = "bastion"
+    }
+
+}
+variable "ansible_sg_tags" {
+    default = {
+        Component = "ansible"
     }
 
 }

@@ -66,6 +66,7 @@ module "ansible" {
   instance_type          = "t3.micro"
   vpc_security_group_ids = [local.ansible_sg_id]
   subnet_id              = local.public_subnet_ids
+              user_data = file("expense.sh")
 
   tags = merge (
     var.common_tags,
